@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Host an Event</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #007bff;
+        }
+        p {
+            line-height: 1.6;
+            color: #666;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Host Your Event</h1>
+    
+    <h2>Event Details</h2>
+    <p>Hosting an event can significantly enhance your visibility, allowing you to market your products or services directly to your target audience. This platform is designed to help you connect with like-minded individuals and industry professionals.</p>
+    
+    <h2>Why Host an Event?</h2>
+    <ul>
+        <li>Showcase your products or services to potential clients.</li>
+        <li>Network with industry professionals and thought leaders.</li>
+        <li>Gain valuable feedback and insights from your audience.</li>
+        <li>Establish your brand as a leader in your field.</li>
+    </ul>
+
+    <h2>Event Registration Form</h2>
+    <form id="eventRegistrationForm" action="EventRegistrationServlet" method="post">
+        <div class="form-group">
+            <label for="event-name">Event Name:</label>
+            <input type="text" id="event-name" name="event-name" required>
+        </div>
+        <div class="form-group">
+            <label for="event-date">Event Date:</label>
+            <input type="date" id="event-date" name="event-date" required>
+        </div>
+        <div class="form-group">
+            <label for="event-location">Location:</label>
+            <input type="text" id="event-location" name="event-location" required>
+        </div>
+        <div class="form-group">
+            <label for="event-description">Event Description:</label>
+            <textarea id="event-description" name="event-description" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>

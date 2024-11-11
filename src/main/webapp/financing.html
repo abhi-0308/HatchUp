@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financing Startups</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        /* Global styles for body and html */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa; /* Light background */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding-top: 50px; /* Space at the top */
+        }
+
+        /* Main container */
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        /* Header styles */
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        /* Financing options */
+        .financing-option {
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            background: #fafafa;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+        }
+
+        .financing-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .financing-option h2 {
+            font-size: 1.8rem;
+            color: #007bff; /* Accent color */
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .financing-option p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Button styles */
+        .financing-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .financing-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        /* Back link at the bottom */
+        .back-link {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-align: center;
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: background-color 0.3s ease;
+        }
+
+        .back-link:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .financing-option {
+                padding: 15px;
+            }
+
+            .financing-btn {
+                padding: 10px 20px;
+            }
+
+            .back-link {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Financing Options for Startups</h1>
+
+        <div class="financing-option">
+            <h2>Angel Investors</h2>
+            <p>Angel investors are affluent individuals who provide capital for startups, often in exchange for convertible debt or ownership equity.</p>
+            <a href="angel-investors.html" class="financing-btn">Learn More</a>
+        </div>
+
+        <div class="financing-option">
+            <h2>Venture Capital</h2>
+            <p>Venture capitalists are firms or individuals that invest in high-growth startups in exchange for equity. They often bring industry expertise.</p>
+            <a href="venture-capital.html" class="financing-btn">Learn More</a>
+        </div>
+
+        <div class="financing-option">
+            <h2>Crowdfunding</h2>
+            <p>Crowdfunding platforms allow you to raise small amounts of money from a large number of people, usually via the internet.</p>
+            <a href="crowdfunding.html" class="financing-btn">Learn More</a>
+        </div>
+
+        <div class="financing-option">
+            <h2>Bootstrapping</h2>
+            <p>Bootstrapping involves funding your startup using your own savings or revenue generated from the business itself.</p>
+            <a href="bootstrapping.html" class="financing-btn">Learn More</a>
+        </div>
+
+        <div class="financing-option">
+            <h2>Bank Loans</h2>
+            <p>Bank loans are traditional forms of financing that provide capital in exchange for interest payments and loan repayment.</p>
+            <a href="bank-loans.html" class="financing-btn">Learn More</a>
+        </div>
+
+        <div class="financing-option">
+            <h2>Grants</h2>
+            <p>Grants are funds provided by governments or organizations that do not need to be repaid. They are often awarded based on specific criteria.</p>
+            <a href="grants.html" class="financing-btn">Learn More</a>
+        </div>
+
+        <div class="financing-option">
+            <h2>Incubators and Accelerators</h2>
+            <p>These programs provide startups with mentorship, resources, and funding in exchange for equity or participation in their program.</p>
+            <a href="incubators-accelerators.html" class="financing-btn">Learn More</a>
+        </div>
+    </div>
+    <a href="resoucedirectory.html" class="back-link">Back to Resource Directory</a>
+</body>
+</html>

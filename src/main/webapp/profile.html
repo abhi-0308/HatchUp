@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Creation and Editing</title>
+    <style>
+        body {
+            font-family: 'Times new roman', Times, serif, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #211a56;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .back-link {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #45a049;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: fixed; /* Fixed position at the bottom of the page */
+    bottom: 20px; /* Position 20px from the bottom of the page */
+    text-align: center;
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Edit Profile</h1>
+    <form id="profileForm" action="ProfileServlet" method="POST">
+        <div class="form-group">
+            <label for="role">Role:</label>
+            <select id="role" name="role" onchange="showRoleSpecificFields()">
+                <option value="investor">Investor</option>
+                <option value="mentor">Mentor</option>
+                <option value="startup">Startup Founder</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="contact">Contact Info:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+        </div>
+        <div class="form-group">
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="text" id="linkedin" name="linkedin">
+        </div>
+        <div class="form-group">
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="City, Country">
+        </div>
+        
+        <!-- Investor Specific Fields -->
+        <div id="investorFields" style="display: none;">
+            <div class="form-group">
+                <label for="investmentRange">Investment Range:</label>
+                <input type="text" id="investmentRange" name="investmentRange" placeholder="e.g., $10,000 - $100,000">
+            </div>
+            <div class="form-group">
+                <label for="investmentStage">Preferred Funding Stages:</label>
+                <input type="text" id="investmentStage" name="investmentStage" placeholder="e.g., Seed, Series A">
+            </div>
+            <div class="form-group">
+                <label for="geographicalPreferences">Geographical Preferences:</label>
+                <input type="text" id="geographicalPreferences" name="geographicalPreferences">
+            </div>
+        </div>
+        
+        <!-- Mentor Specific Fields -->
+        <div id="mentorFields" style="display: none;">
+            <div class="form-group">
+                <label for="areasOfExpertise">Areas of Expertise:</label>
+                <input type="text" id="areasOfExpertise" name="areasOfExpertise" placeholder="e.g., Marketing, Product Development">
+            </div>
+            <div class="form-group">
+                <label for="previousMentorships">Previous Mentorships:</label>
+                <textarea id="previousMentorships" name="previousMentorships" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="availability">Availability:</label>
+                <input type="text" id="availability" name="availability" placeholder="e.g., Weekdays, Weekends">
+            </div>
+        </div>
+
+        <!-- Startup Founder Specific Fields -->
+        <div id="startupFields" style="display: none;">
+            <div class="form-group">
+                <label for="startupName">Startup Name:</label>
+                <input type="text" id="startupName" name="startupName" placeholder="Name of your startup">
+            </div>
+            <div class="form-group">
+                <label for="startupStage">Stage:</label>
+                <input type="text" id="startupStage" name="startupStage" placeholder="e.g., Idea, Prototype, MVP">
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Product/Service Description:</label>
+                <textarea id="productDescription" name="productDescription" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="startupNeeds">Startup Needs:</label>
+                <textarea id="startupNeeds" name="startupNeeds" rows="3" placeholder="What support do you need?"></textarea>
+            </div>
+        </div>
+
+        <button type="submit">Save Profile</button>
+    </form>
+</div>
+
+<script>
+    function showRoleSpecificFields() {
+        const role = document.getElementById('role').value;
+        document.getElementById('investorFields').style.display = 'none';
+        document.getElementById('mentorFields').style.display = 'none';
+        document.getElementById('startupFields').style.display = 'none';
+
+        if (role === 'investor') {
+            document.getElementById('investorFields').style.display = 'block';
+        } else if (role === 'mentor') {
+            document.getElementById('mentorFields').style.display = 'block';
+        } else if (role === 'startup') {
+            document.getElementById('startupFields').style.display = 'block';
+        }
+    }
+</script>
+
+<div class="back-link">
+        <a href="resoucedirectory.html">Resource Directory</a>
+    </div>
+</body>
+</html>

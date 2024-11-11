@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recoleta:wght@400;700&family=Harmoni:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            background-color: #8db3df; /* Midnight Blue Background */
+            color: #c8834c; /* White Text */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #003f5c; /* Darker Midnight Blue */
+            padding: 20px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            font-family: 'Harmoni', sans-serif;
+            color: #e6dbc6; /* Tan */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            color: #dcdcdc; /* Moon Grey Text */
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #1e2a38; /* Slightly Lighter Midnight Blue */
+            border-radius: 4px;
+            background-color: #004d6b; /* Moon Grey Input Background */
+            color: #ffffff; /* White Text in Input */
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #f0f0f0; /* Moon Grey Button Background */
+            color: #002f4b; /* Midnight Blue Text */
+            font-family: 'Recoleta', sans-serif;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e0e0e0; /* Slightly Darker Moon Grey */
+        }
+        /* Styling for the links */
+        .link-container {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+        .link-container a {
+            color: #003f5c;
+            font-size: 16px;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .link-container a:hover {
+            color: rgb(0, 0, 160);
+        }
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .success-message {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signupForm" action="SignupServlet" method="POST" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="signup-role">Role:</label>
+                <select id="signup-role" name="role">
+                    <option value="startup">Startup</option>
+                    <option value="mentor">Mentor</option>
+                    <option value="investor">Investor</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="signup-name">Name:</label>
+                <input type="text" id="signup-name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="error-message" id="error-message" style="display: none;">Incorrect password. Please try again.</div>
+        <div class="success-message" id="success-message" style="display: none;">Sign-up successful!</div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var password = document.getElementById('signup-password').value;
+            var errorMessage = document.getElementById('error-message');
+            var successMessage = document.getElementById('success-message');
+            
+            // Validate password: at least 8 characters, at least one number, one uppercase letter, and one special character
+            var passwordRegex = /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$/;
+
+            if (!passwordRegex.test(password)) {
+                errorMessage.style.display = 'none';
+                alert("Password must contain at least 8 characters, including one uppercase letter, one number, and one special character.");
+                return false; // Prevent form submission
+            }
+
+            // If password is valid, display success message
+            successMessage.style.display = 'block';
+            return true; // Proceed with form submission
+        }
+    </script>
+</body>
+</html>

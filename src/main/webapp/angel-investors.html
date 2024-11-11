@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel Investors</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        /* Ensure the body and html elements cover the full height */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Start from the top */
+            background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
+            padding-top: 50px; /* Adds space at the top to avoid content sticking to the top */
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #333;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .investor-profile {
+            background: #fff;
+            margin-bottom: 20px;
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .investor-profile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #007bff;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            font-weight: 600;
+            color: #444;
+        }
+
+        .back-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 30px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .investor-profile {
+                padding: 20px;
+            }
+
+            .back-btn {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Angel Investors</h1>
+        <p>Explore notable angel investors and their areas of investment:</p>
+
+        <div class="investor-profile">
+            <h2>John Smith</h2>
+            <p class="contact-info">Contact: <a href="mailto:john.smith@example.com" style="color: #007bff;">john.smith@example.com</a></p>
+            <p><strong>Investments:</strong> Tech startups, healthcare, and fintech.</p>
+            <p><strong>About:</strong> John has a keen interest in innovative technology solutions and has funded several successful startups in the past five years.</p>
+        </div>
+
+        <div class="investor-profile">
+            <h2>Jane Doe</h2>
+            <p class="contact-info">Contact: <a href="mailto:jane.doe@example.com" style="color: #007bff;">jane.doe@example.com</a></p>
+            <p><strong>Investments:</strong> Sustainable energy, agtech, and e-commerce.</p>
+            <p><strong>About:</strong> With over 15 years in venture funding, Jane focuses on environmentally sustainable projects and has a track record of high returns.</p>
+        </div>
+
+        <div class="investor-profile">
+            <h2>Robert Johnson</h2>
+            <p class="contact-info">Contact: <a href="mailto:robert.johnson@example.com" style="color: #007bff;">robert.johnson@example.com</a></p>
+            <p><strong>Investments:</strong> Edtech and mobile apps.</p>
+            <p><strong>About:</strong> Robert has a background in education technology and is passionate about improving access to quality education through innovative platforms.</p>
+        </div>
+
+        <div class="investor-profile">
+            <h2>Emily Davis</h2>
+            <p class="contact-info">Contact: <a href="mailto:emily.davis@example.com" style="color: #007bff;">emily.davis@example.com</a></p>
+            <p><strong>Investments:</strong> Healthtech and biomedicine.</p>
+            <p><strong>About:</strong> Emily specializes in early-stage health startups and is known for her hands-on mentoring approach.</p>
+        </div>
+
+        <div class="investor-profile">
+            <h2>Michael Brown</h2>
+            <p class="contact-info">Contact: <a href="mailto:michael.brown@example.com" style="color: #007bff;">michael.brown@example.com</a></p>
+            <p><strong>Investments:</strong> SaaS and cloud computing.</p>
+            <p><strong>About:</strong> With a strong background in software engineering, Michael is passionate about the future of cloud technology and SaaS business models.</p>
+        </div>
+
+        <!-- Add more investors in the same pattern -->
+
+        <a href="financing.html" class="back-btn">Back to Financing Options</a>
+    </div>
+</body>
+</html>

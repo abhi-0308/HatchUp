@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 50px;
+        }
+
+        .banner {
+            width: 100%;
+            background-color: #111;
+            color: #f4f4f4;
+            padding: 40px;
+            text-align: center;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #f4f4f4;
+            margin-bottom: 20px;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.1rem;
+            color: #000;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .section h3 {
+            margin-top: 0;
+            font-size: 1.8rem;
+            color: #0072ff;
+        }
+
+        .section p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .go-to-btn {
+            padding: 12px 25px;
+            background-color: #0072ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin-top: 10px;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .go-to-btn:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 25px;
+            background-color: #0072ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Banner -->
+    <div class="banner">Support System</div>
+
+    <!-- Content Container -->
+    <div class="container">
+        <h2>Welcome to the Support System</h2>
+        <p>Here, you can find resources and services designed to help startups, mentors, and investors thrive within our ecosystem. Explore the sections below to find support tailored to your needs.</p>
+        
+        <!-- Sample Support Sections -->
+        <div class="section">
+            <h3>Mentorship Program</h3>
+            <p>Connect with experienced mentors who can guide you through various stages of your startup journey. Our mentors offer advice, industry insights, and personalized support to help you succeed.</p>
+            <a href="mentorship.html" class="go-to-btn">Go to Mentorship Program</a>
+        </div>
+
+        <div class="section">
+            <h3>Legal Support</h3>
+            <p>Our legal support team is here to provide guidance and resources to help you navigate any legal challenges. Reach out for assistance, and we’ll ensure you have the information needed to make informed decisions.</p>
+            <a href="legal.html" class="go-to-btn">Go to Legal Support</a>
+        </div>
+
+        <div class="section">
+            <h3>Technical Support</h3>
+            <p>Need help with technical issues? Our dedicated support team is available to assist with platform-related questions, troubleshooting, and more.</p>
+            <a href="technical-support.html" class="go-to-btn">Go to Technical Support</a>
+        </div>
+
+        <!-- Back Link to Resource Directory -->
+        <a href="resoucedirectory.html" class="back-link">Back to Resource Directory</a>
+    </div>
+
+</body>
+</html>

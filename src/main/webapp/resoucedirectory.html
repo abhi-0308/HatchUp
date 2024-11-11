@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Directory</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        .banner {
+            width: 100%;
+            background: #111;
+            color: #f4f4f4;
+            padding: 40px;
+            text-align: center;
+            font-size: 2.5rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin: 10px;
+            background-color: #0072ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.25rem;
+            text-align: center;
+            width: 220px;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px);
+        }
+
+        .button:active {
+            transform: translateY(2px);
+        }
+
+        .button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 114, 255, 0.4);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Head Banner -->
+    <div class="banner">Resource Directory</div>
+
+    <!-- Button Container -->
+    <div class="container">
+        <a href="support-system.html" class="button">Support System</a>
+        <a href="marketing.html" class="button">Marketing</a>
+        <a href="financing.html" class="button">Financing</a>
+    </div>
+</body>
+</html>

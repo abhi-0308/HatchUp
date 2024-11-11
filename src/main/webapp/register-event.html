@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+        .container {
+            background-color: #fff;
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #007bff;
+        }
+        .event-list {
+            margin-bottom: 20px;
+        }
+        .event {
+            background-color: #fafafa;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .event h3 {
+            margin-top: 0;
+        }
+        .event-details {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .register-form {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+        .back-link {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: fixed; /* Fixed position at the bottom of the page */
+    bottom: 20px; /* Position 20px from the bottom of the page */
+    left: 20px; /* Position 20px from the left side of the page */
+}
+
+.back-link:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Event Registration</h1>
+
+    <div class="event-list">
+        <h2>Upcoming Technical Events</h2>
+        
+        <div class="event">
+            <h3>1. AI and Machine Learning Workshop</h3>
+            <p class="event-details"><strong>Date:</strong> November 20, 2024</p>
+            <p class="event-details"><strong>Location:</strong> Bengaluru, India</p>
+            <p>Learn the fundamentals of AI and machine learning, and explore advanced topics with hands-on sessions.</p>
+        </div>
+        
+        <div class="event">
+            <h3>2. Cybersecurity Conference</h3>
+            <p class="event-details"><strong>Date:</strong> December 5, 2024</p>
+            <p class="event-details"><strong>Location:</strong> New Delhi, India</p>
+            <p>Gain insights into the latest trends in cybersecurity and learn from industry experts.</p>
+        </div>
+        
+        <div class="event">
+            <h3>3. Cloud Computing Bootcamp</h3>
+            <p class="event-details"><strong>Date:</strong> January 10, 2025</p>
+            <p class="event-details"><strong>Location:</strong> Hyderabad, India</p>
+            <p>A hands-on bootcamp focused on cloud computing fundamentals and deployment strategies.</p>
+        </div>
+        
+        <div class="event">
+            <h3>4. Blockchain and Cryptocurrency Summit</h3>
+            <p class="event-details"><strong>Date:</strong> February 25, 2025</p>
+            <p class="event-details"><strong>Location:</strong> Mumbai, India</p>
+            <p>Explore the world of blockchain technology and its applications in finance and beyond.</p>
+        </div>
+        
+        <div class="event">
+            <h3>5. Web Development Hackathon</h3>
+            <p class="event-details"><strong>Date:</strong> March 12, 2025</p>
+            <p class="event-details"><strong>Location:</strong> Chennai, India</p>
+            <p>Showcase your web development skills and collaborate with peers to build innovative projects.</p>
+        </div>
+        
+        <div class="event">
+            <h3>6. Data Science and Analytics Seminar</h3>
+            <p class="event-details"><strong>Date:</strong> April 18, 2025</p>
+            <p class="event-details"><strong>Location:</strong> Pune, India</p>
+            <p>Learn about data science applications in various industries, with expert-led discussions and case studies.</p>
+        </div>
+        
+        <div class="event">
+            <h3>7. Robotics and Automation Expo</h3>
+            <p class="event-details"><strong>Date:</strong> May 5, 2025</p>
+            <p class="event-details"><strong>Location:</strong> Coimbatore, India</p>
+            <p>Witness the latest advancements in robotics and automation technologies.</p>
+        </div>
+               <a href="resoucedirectory.html" class="back-link">Back to Resource Directory</a>
+        
+    </div>
+
+    <div class="register-form">
+        <h2>Register for an Event</h2>
+            <form id="EventRegistrationHandlerServlet" action="EventRegistrationHandlerServlet" method="post">
+            <label for="event">Choose Event:</label>
+            <select id="event" name="event">
+                <option value="AI and Machine Learning Workshop">AI and Machine Learning Workshop</option>
+                <option value="Cybersecurity Conference">Cybersecurity Conference</option>
+                <option value="Cloud Computing Bootcamp">Cloud Computing Bootcamp</option>
+                <option value="Blockchain and Cryptocurrency Summit">Blockchain and Cryptocurrency Summit</option>
+                <option value="Web Development Hackathon">Web Development Hackathon</option>
+                <option value="Data Science and Analytics Seminar">Data Science and Analytics Seminar</option>
+                <option value="Robotics and Automation Expo">Robotics and Automation Expo</option>
+            </select>
+            
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+            
+
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us - HatchUp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            transition: 0.5s;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: #f1f1f1;
+            text-align: center;
+        }
+        img {
+            width: 130px;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #ece7e7;
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 70px;
+            padding-top: 20px;
+            font-family: 'Fredoka One', cursive;
+        }
+        p {
+            line-height: 30px;
+            font-size: 20px;
+            font-family: sans-serif;
+            color: #444;
+            padding-top: 20px;
+        }
+        form {
+            margin-top: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #444;
+        }
+        button {
+            width: 250px;
+            height: 55px;
+            background-color: #f44336;
+            border: none;
+            font-size: 18px;
+            color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <img src="hatch-up-logo-svg.svg" alt="HatchUp Logo">
+    <h1>Contact Us</h1>
+    <p>If you have any questions or inquiries, feel free to reach out to us!</p>
+    <form action="thank-you-contact.html" method="post">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</body>
+</html>
